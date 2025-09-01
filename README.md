@@ -24,7 +24,7 @@ Il est structuré en plusieurs phases, de l’idéation à la clôture, pour sim
 5. **Project Closure** → Présentation finale et retour d’expérience.  
 
 ## 🛠️ Technologies prévues
-- **Langage** : (à préciser, ex. Python / JavaScript / etc.)  
+- **Langage** : (UX UI DESIGN, HTML, CSS, JS, React, Python / Flask / bibliothèques d’IA sont maîtrisés ou accessible / JavaScript / etc.)  
 - **Outils de versionning** : Git & GitHub  
 - **Outils de gestion** : Trello / GitHub Projects  
 - **Documentation** : Markdown  
