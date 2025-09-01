@@ -19,7 +19,7 @@ J’ai attribué un score de 1 à 5 pour chaque critère (1 = faible, 5 = excell
 |---------------------------|-------------|-------------|
 | Feasibility               | 4           | Les technologies web et IA pour la détection sont accessibles et adaptées au MVP |
 | Potential Impact          | 5           | Vérification des contenus falsifiés répond à un vrai besoin sociétal et pratique |
-| Technical Alignment       | 4           | HTML, CSS, JS, React, Python/Flask et bibliothèques d’IA sont maîtrisés ou accessibles |
+| Technical Alignment       | 4           | UX UI DESIGN, HTML, CSS, JS, React, Python/Flask et bibliothèques d’IA sont maîtrisés ou accessibles |
 | Scalability               | 3           | Extension possible à d’autres types de contenus et utilisateurs, mais nécessitera optimisation future |
 
 **Score total : 16/20**
