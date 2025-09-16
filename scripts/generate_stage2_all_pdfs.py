@@ -173,3 +173,43 @@ story2.append(Paragraph(
 ))
 doc2.build(story2)
 print(f"✅ PDF Tâche 2 généré : {task2_path}")
+
+# ==============================
+# === TÂCHE 3 : Identify Risks
+# ==============================
+task3_path = os.path.join(output_dir, "Stage2_Task3_Identify_Risks.pdf")
+doc3 = SimpleDocTemplate(task3_path, pagesize=A4)
+story3 = []
+story3.append(Paragraph("Stage 2 – Task 3: Identify Risks", styles['Title']))
+story3.append(Spacer(1, 20))
+story3.append(Paragraph(
+    "Cette section identifie les risques potentiels du projet et propose des stratégies de mitigation pour chacun.",
+    styles['Normal']
+))
+story3.append(Spacer(1, 12))
+
+# Tableau des risques
+data_risks = [
+    ["Risque", "Catégorie", "Stratégie de mitigation"],
+    ["Manque de temps pour finaliser certaines fonctionnalités", "Timeline",
+     "Établir un planning réaliste, prioriser les tâches essentielles, utiliser un suivi régulier."],
+    ["Difficultés techniques avec les outils ou frameworks utilisés", "Technical",
+     "Prévoir une phase de recherche et tests préliminaires ; solliciter de l’aide ou des ressources en ligne."],
+    ["Perte de données ou corruption de fichiers", "Technical",
+     "Utiliser un contrôle de version (GitHub) et des sauvegardes régulières."],
+    ["Feedback tardif ou insuffisant des instructeurs", "Communication",
+     "Fixer des jalons clairs et envoyer des rappels réguliers pour obtenir du feedback."],
+    ["Perte de motivation ou surcharge de travail", "Team Dynamics",
+     "Planifier des pauses, maintenir un rythme soutenable et célébrer les progrès réalisés."]
+]
+table_risks = Table(data_risks, colWidths=[200, 100, 200])
+table_risks.setStyle(TableStyle([
+    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+    ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+    ('INNERGRID', (0, 0), (-1, -1), 0.25, colors.black),
+    ('BOX', (0, 0), (-1, -1), 0.5, colors.black),
+]))
+story3.append(table_risks)
+doc3.build(story3)
+print(f"✅ PDF Tâche 3 généré : {task3_path}")
