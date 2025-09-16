@@ -213,3 +213,50 @@ table_risks.setStyle(TableStyle([
 story3.append(table_risks)
 doc3.build(story3)
 print(f"✅ PDF Tâche 3 généré : {task3_path}")
+
+# ==============================
+# --- Task 4: Develop a High-Level Plan ---
+# ==============================
+task4_path = os.path.join(output_dir, "Stage2_Task4_High_Level_Plan.pdf")
+doc4 = SimpleDocTemplate(task4_path, pagesize=A4)
+story4 = []
+
+story4.append(Paragraph("Stage 2 – Task 4: Develop a High-Level Plan", styles['Title']))
+story4.append(Spacer(1, 20))
+
+story4.append(Paragraph(
+    "Cette section présente les grandes phases et jalons du projet sous forme de plan simplifié. "
+    "Elle aide à visualiser la progression et les livrables clés.", styles['Normal']
+))
+story4.append(Spacer(1, 20))
+
+# Phases principales
+phases_data = [
+    ["Stage", "Description", "Jalons / Livrables", "Durée estimée"],
+    ["Stage 1: Idea Development", "Génération et validation d'idées.", "Liste d'idées validées", "Semaine 1-2 (Terminé)"],
+    ["Stage 2: Project Charter Development", "Rédaction de la charte et des livrables initiaux.", "Project Charter, Scope, Risks", "Semaine 3-4 (En cours)"],
+    ["Stage 3: Technical Documentation", "Création des spécifications techniques et architecture.", "Docs techniques complètes", "Semaine 5-6"],
+    ["Stage 4: MVP Development", "Développement du produit minimum viable.", "Version MVP fonctionnelle", "Semaine 7-10"],
+    ["Stage 5: Project Closure", "Présentation finale, rétrospective et clôture.", "Présentation finale et rapport", "Semaine 11-12"]
+]
+table4 = Table(phases_data, colWidths=[120, 150, 150, 80])
+table4.setStyle(TableStyle([
+    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+    ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+    ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+    ('INNERGRID', (0, 0), (-1, -1), 0.25, colors.black),
+    ('BOX', (0, 0), (-1, -1), 0.5, colors.black),
+]))
+story4.append(table4)
+story4.append(Spacer(1, 20))
+
+# Résumé visuel
+story4.append(Paragraph(
+    "<b>Résumé visuel :</b> Le projet suit un enchaînement clair, du développement d'idées jusqu'à la clôture, "
+    "avec des jalons hebdomadaires pour assurer un suivi efficace.", styles['Normal']
+))
+
+doc4.build(story4)
+print(f"✅ PDF Tâche 4 généré : {task4_path}")
+
