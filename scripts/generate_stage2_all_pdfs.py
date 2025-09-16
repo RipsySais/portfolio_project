@@ -133,3 +133,43 @@ story1.append(Spacer(1, 20))
 doc1.build(story1)
 print(f"✅ PDF Tâche 1 généré : {task1_path}")
 
+# ==============================
+# === TÂCHE 2 : Define Scope
+# ==============================
+task2_path = os.path.join(output_dir, "Stage2_Task2_Define_Scope.pdf")
+doc2 = SimpleDocTemplate(task2_path, pagesize=A4)
+story2 = []
+story2.append(Paragraph("Stage 2 – Task 2: Define Scope", styles['Title']))
+story2.append(Spacer(1, 20))
+story2.append(Paragraph(
+    "Cette section définit ce que le projet livrera (<b>in-scope</b>) et ce qui ne sera pas inclus (<b>out-of-scope</b>) "
+    "afin de concentrer les efforts sur les éléments essentiels.", styles['Normal']
+))
+story2.append(Spacer(1, 20))
+
+# In-Scope et Out-of-Scope
+story2.append(Paragraph("<b>In-Scope (Inclus dans le projet)</b>", styles['Heading2']))
+story2.append(Paragraph(
+    "<ul>"
+    "<li>Création d’un site portfolio responsive utilisant HTML, CSS et JavaScript.</li>"
+    "<li>Présentation d’au moins trois projets documentés (description, visuels, liens GitHub).</li>"
+    "<li>Section 'Compétences' présentant les langages et outils maîtrisés.</li>"
+    "<li>Section Contact fonctionnelle (formulaire ou liens directs).</li>"
+    "<li>Déploiement sur une plateforme gratuite (GitHub Pages).</li>"
+    "<li>Mise en place d’un design moderne, lisible et accessible.</li>"
+    "</ul>", styles['Normal']
+))
+story2.append(Spacer(1, 12))
+
+story2.append(Paragraph("<b>Out-of-Scope (Exclus du projet)</b>", styles['Heading2']))
+story2.append(Paragraph(
+    "<ul>"
+    "<li>Développement d’un blog complet ou d’un système CMS intégré.</li>"
+    "<li>Création d’une base de données ou backend complexe.</li>"
+    "<li>Optimisation SEO avancée ou intégration marketing payante.</li>"
+    "<li>Automatisation de l’import des projets depuis GitHub/LinkedIn.</li>"
+    "<li>Fonctionnalités d’e-commerce ou de paiement en ligne.</li>"
+    "</ul>", styles['Normal']
+))
+doc2.build(story2)
+print(f"✅ PDF Tâche 2 généré : {task2_path}")
