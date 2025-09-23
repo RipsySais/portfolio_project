@@ -39,3 +39,32 @@ Chaque entrée inclura la date, les tâches réalisées, les décisions prises e
   - Préparer le `Project Charter` avec objectifs, périmètre, parties prenantes et risques.
   - Commencer le développement du MVP.
   - Continuer la documentation et le suivi quotidien dans ce journal de bord.
+
+---
+
+## 📅 2025-09-21
+- **Tâches réalisées :**
+  - Revue des idées initiales et sélection définitive du MVP.
+  - Documentation de la phase **Idea Development** avec tableau comparatif des idées, forces/faiblesses et justification du choix final.
+
+---
+
+## 📅 2025-09-22
+- **Tâches réalisées :**
+  - Création du script Python `generate_stage2_all_pdfs.py` pour automatiser la génération des PDFs.  
+  - Vérification du dossier `Stage_2_Project_Charter/docs` et ajout des fichiers générés.  
+  - Organisation du dépôt et commits initiaux pour Stage 2.
+
+---
+
+## 📅 2025-09-23
+- **Tâches réalisées :**
+  - Génération et enrichissement des PDFs pour Stage 2 (Tâches 0 à 4) avec `generate_stage2_all_pdfs.py`.  
+  - Résolution de l’erreur `NameError: name 'tasks' is not defined`.  
+  - Intégration du contenu Stage 2 (Objectives, Stakeholders, Scope, Risks, High-Level Plan) dans le document MVP Development.  
+  - Organisation et vérification du dépôt avant push GitHub (`git add`, `git commit`, `git push`).  
+
+- **Prochaines étapes :**
+  - Consolider le document final **Project Charter**.  
+  - Démarrer Stage 3 (Technical Documentation).  
+
